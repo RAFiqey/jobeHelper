@@ -1,0 +1,31 @@
+
+/*Подгружаем нужный шрифт из Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+/*
+Подключение шрифта происходит по средствам вставки в нужный блок кода
+font-family: "название шрифта"
+*/
+
+.text{
+    font-family: 'Russo One', sans-serif;
+    color: Blue;
+    }
+
+h2
+{
+    color: Yelow;
+}
+
+*
+{
+    font-family: 'Russo One', sans-serif;
+}
+
+p {
+font-family: 'Russo One', sans-serif;
+display: block;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;
+}

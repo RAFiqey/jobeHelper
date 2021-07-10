@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Внести изменения</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<form action="#" th:action="@{/project-update}" th:object="${projects}" method="post">
+    <p>
+    <label for="id">№ п/п</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    </p>
+
+
+    <p>
+    <label for="num_dogovor">Номер договора</label>
+    <input type="text" th:field="*{num_dogovor}" id="num_dogovor" placeholder="Номер договора">
+    </p>
+
+    <p>
+    <label for="month_dogovor">Месяц</label>
+
+        <select name="two" th:field="*{month_dogovor}" id="month_dogovor" class="dropdown-select">
+            <option value="Январь">Январь</option>
+            <option value="Февраль">Февраль</option>
+            <option value="Март">Март</option>
+            <option value="Апрель">Апрель</option>
+            <option value="Май">Май</option>
+            <option value="Июнь">Июнь</option>
+            <option value="Июль">Июль</option>
+            <option value="Август">Август</option>
+            <option value="Сентябрь">Сентябрь</option>
+            <option value="Октябрь">Октябрь</option>
+            <option value="Ноябрь">Ноябрь</option>
+            <option value="Декабрь">Декабрь</option>
+        </select>
+
+    </p>
+
+    <p>
+    <label for="date_dogovor">Дата заключения договора</label>
+    <input type="text" th:field="*{date_dogovor}" id="date_dogovor" placeholder="Дата заключения договора">
+    </p>
+
+    <p>
+    <label for="name_adress">Название объекта и адрес</label>
+    <input type="text" th:field="*{name_adress}" id="name_adress" placeholder="Название объекта и адрес">
+    </p>
+
+    <p>
+    <label for="gotovnost">Готовность</label>
+
+        <select name="two" th:field="*{gotovnost}" id="gotovnost" class="dropdown-select">
+            <option value="1)Пришло отношение">Пришло отношение</option>
+            <option value="2)В работе">В работе</option>
+            <option value="3)Отправил на Гродно">Отправил на Гродно</option>
+            <option value="4) Отправил заказчику">Отправил заказчику</option>
+            <option value="5)Готово">Готово</option>
+        </select>
+    </p>
+
+    <p>
+    <label for="cash">Цена договора</label>
+    <input type="text" th:field="*{cash}" id="cash" placeholder="Цена договора">
+    </p>
+
+    <p>
+    <label for="type_project">Тип проекта</label>
+    <input type="text" th:field="*{type_project}" id="type_project" placeholder="Тип проекта">
+    </p>
+
+    <p>
+    <label for="buhg">Сдал в бухгалтерию</label>
+    <input type="text" th:field="*{buhg}" id="buhg" placeholder="Сдал в бухгалтерию">
+    </p>
+
+    <p>
+    <label for="comm">Примечание</label>
+    <input type="text" th:field="*{comm}" id="comm" placeholder="Примечание">
+    </p>
+
+    <p>
+    <input type="submit" value="Внести изменения">
+    </p>
+
+</form>
+
+<p><a href="/">На главную страницу</a></p>
+</body>
+</html>

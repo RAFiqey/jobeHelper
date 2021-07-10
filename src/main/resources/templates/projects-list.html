@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Окупаемость проектировщика</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div th:switch="${projects}">
+    <h2 th:case="null">No projects found!</h2>
+    <div th:case="*">
+        <h2>Список проектов</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>№ п/п</th>
+                <th>Номер договора</th>
+                <th>Месяц</th>
+                <th>Дата договора</th>
+                <th>Название объекта</th>
+                <th>Готовность</th>
+                <th>Цена</th>
+                <th>Тип сигнализации</th>
+                <th>Дата сдачи в бухгалтерию</th>
+                <th>Примечание</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="projects : ${projects}">
+                <td th:text="${projects.id}"></td>
+                <td th:text="${projects.num_dogovor}"></td>
+                <td th:text="${projects.month_dogovor}"></td>
+                <td th:text="${projects.date_dogovor}"></td>
+                <td th:text="${projects.name_adress}"></td>
+                <td th:text="${projects.gotovnost}"></td>
+                <td th:text="${projects.cash}"></td>
+                <td th:text="${projects.type_project}"></td>
+                <td th:text="${projects.buhg}"></td>
+                <td th:text="${projects.comm}"></td>
+                <td><a th:href="@{project-update/{id}(id=${projects.id})}">Редактировать</a> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/project-create">Добавить проект</a></p>
+    <p><a href="/">На главную страницу</a></p>
+</div>
+</body>
+</html>
