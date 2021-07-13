@@ -28,8 +28,6 @@ public class Projects {
     private String cash;
     @Column(name = "type_project")
     private String type_project;
-    @Column(name = " buhg")
-    private String  buhg;
     @Column(name = "comm")
     private String comm;
 

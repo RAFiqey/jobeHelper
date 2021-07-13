@@ -22,7 +22,6 @@
                 <th>Готовность</th>
                 <th>Цена</th>
                 <th>Тип сигнализации</th>
-                <th>Дата сдачи в бухгалтерию</th>
                 <th>Примечание</th>
             </tr>
             </thead>
@@ -36,7 +35,6 @@
                 <td th:text="${projects.gotovnost}"></td>
                 <td th:text="${projects.cash}"></td>
                 <td th:text="${projects.type_project}"></td>
-                <td th:text="${projects.buhg}"></td>
                 <td th:text="${projects.comm}"></td>
                 <td><a th:href="@{project-update/{id}(id=${projects.id})}">Редактировать</a> </td>
             </tr>
