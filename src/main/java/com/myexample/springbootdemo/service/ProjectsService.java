@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProjectsService {
@@ -28,6 +27,10 @@ public class ProjectsService {
 
     public Projects saveProject(Projects projects){
         return projectsRepository.save(projects);
+    }
+
+    public List<String> findAllCashComplete(){
+        return projectsRepository.findAllCash();
     }
 
 }
