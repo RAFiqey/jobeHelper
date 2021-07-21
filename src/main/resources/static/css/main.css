@@ -29,3 +29,9 @@ margin-bottom: 1em;
 margin-left: 0;
 margin-right: 0;
 }
+
+form-floating{
+margin-left: auto;
+margin-right: auto;
+wight: 6em;
+}

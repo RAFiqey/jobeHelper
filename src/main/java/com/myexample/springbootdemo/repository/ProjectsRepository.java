@@ -13,7 +13,7 @@ import java.util.List;
 public interface ProjectsRepository extends JpaRepository<Projects, Long> {
 
     @Query(
-            value = "select cash from projects where gotovnost = :5)Готово",
+            value = "select SUM(cash) from projects where gotovnost = :5)Готово",
             nativeQuery = true
     )
     List<String> findAllCash();
